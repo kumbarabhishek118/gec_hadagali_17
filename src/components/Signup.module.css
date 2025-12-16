@@ -1,0 +1,254 @@
+.signupWrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signupWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.signupCard {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 20px !important;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.signupCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15) !important;
+}
+
+.cardHeader {
+  background: linear-gradient(135deg, #6f42c1 0%, #007bff 100%) !important;
+  padding: 2.5rem 2rem !important;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardHeader::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.title {
+  font-weight: 800 !important;
+  font-size: 2.2rem !important;
+  margin-bottom: 0.5rem !important;
+  position: relative;
+  z-index: 2;
+}
+
+.subtitle {
+  font-size: 1.1rem !important;
+  opacity: 0.9;
+  margin-bottom: 0 !important;
+  position: relative;
+  z-index: 2;
+}
+
+.cardBody {
+  padding: 2.5rem !important;
+}
+
+.alertCustom {
+  border: none;
+  border-radius: 12px;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.formLabel {
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.formControl {
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.formControl:focus {
+  border-color: #6f42c1;
+  box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.1);
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.inputGroup {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.inputGroupText {
+  /* background: linear-gradient(135deg, #6f42c1, #007bff) !important; */
+  border: none !important;
+  color: white !important;
+  font-weight: 600;
+
+}
+
+.selectControl {
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.selectControl:focus {
+  border-color: #6f42c1;
+  box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.1);
+  transform: translateY(-2px);
+}
+
+.submitButton {
+  background: linear-gradient(135deg, #6f42c1 0%, #007bff 100%) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  transition: all 0.4s ease !important;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(111, 66, 193, 0.3) !important;
+}
+
+.submitButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(111, 66, 193, 0.4) !important;
+}
+
+.submitButton:active {
+  transform: translateY(-1px);
+}
+
+.submitButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.submitButton:hover::before {
+  left: 100%;
+}
+
+.loginLink {
+  color: #6f42c1 !important;
+  text-decoration: none !important;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.loginLink:hover {
+  color: #007bff !important;
+  transform: translateX(5px);
+}
+
+.loginLink::after {
+  content: '→';
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.loginLink:hover::after {
+  transform: translateX(3px);
+}
+
+.securityNote {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.securityIcon {
+  color: #6f42c1;
+  font-size: 1.1rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.rowGap {
+  gap: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cardBody {
+    padding: 2rem 1.5rem !important;
+  }
+  
+  .cardHeader {
+    padding: 2rem 1.5rem !important;
+  }
+  
+  .title {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .signupWrapper {
+    padding: 20px 15px;
+  }
+  
+  .cardBody {
+    padding: 1.5rem !important;
+  }
+}
